@@ -1,0 +1,11 @@
+<div class="container">
+   <div class="row">
+     <div *ngFor="let product of products" class="col-lg-3 col-md-6 col-sm-12 p-5 text-center">
+        <div>
+         <img [src]="product.images[0]" alt="" class="w-100 h-100" [routerLink]="['/singleProduct', product.id]">
+         <h3>{{product.title}}</h3>
+         <h5>{{product.category}}</h5>
+        </div>
+     </div>
+   </div>
+</div>

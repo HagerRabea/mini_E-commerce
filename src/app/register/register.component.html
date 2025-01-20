@@ -1,0 +1,19 @@
+
+<div class=" bg-light vh-100">
+   <form [formGroup]="registerData" class="container" (ngSubmit)="regsiter(registerData)">
+<label for="">First Name :</label>
+<input type="text" class="form-control" formControlName="firstName">
+<div class="alert alert-danger" role="alert" *ngIf="registerData.controls.firstName.touched&&registerData.controls.firstName.invalid">
+    Please Start with Capital Letter!
+  </div>
+<label for="">Last Name :</label>
+<input type="text" class="form-control" formControlName="lastName">
+<label for="">Age :</label>
+<input type="text" class="form-control" formControlName="age">
+<label for="">Email :</label>
+<input type="text" class="form-control" formControlName="email">
+<label for="">Password :</label>
+<input type="text" class="form-control" formControlName="password">
+<button class="btn btn-success mt-2" [disabled]="registerData.invalid&&registerData.touched">Resigter</button>
+   </form>
+</div>
